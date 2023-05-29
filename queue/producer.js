@@ -7,7 +7,7 @@ const amqp_url_docker= 'ampq://localhost:5672';
 const sendQueue = async ({ msg }) => {
     try{
         //create connect
-        const conn = await amqplib.connect(amqp_url_cloud)
+        const conn = await amqplib.connect(amqp_url_docker)
         //create channel
         const channel = await conn.createChannel();
         //create name queue
